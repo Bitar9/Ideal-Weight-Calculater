@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight and Height Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight and Height Calculator</h1>
+        <div class="gender-selection">
+            <div class="gender-option">
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male"><img src="male.png" alt="Male"></label>
+            </div>
+            <div class="gender-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"><img src="female.png" alt="Female"></label>
+            </div>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="1" required>
+        </div>
+        <div>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" min="1" required>
+        </div>
+        <button onclick="calculateIdealWeight()">Calculate</button>
+        <div id="result">
+            <p>Ideal Weight: <span id="idealWeight"></span></p>
+            <p>Ideal Height: <span id="idealHeight"></span></p>
+        </div>
+        <div id="result">
+            <p>Ideal Weight: <span id="idealWeight"></span></p>
+            <p>Ideal Height: <span id="idealHeight"></span></p>
+        </div>
+        
+        <div id="weightGoalOptions" style="display: none;">
+            <p>Select your weight goal:</p>
+            <button onclick="redirectToDietPage('gain')">Gain Weight</button>
+            <button onclick="redirectToDietPage('lose')">Lose Weight</button>
+        </div>
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
